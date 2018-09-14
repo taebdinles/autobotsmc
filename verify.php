@@ -1,15 +1,26 @@
 <?php
-$access_token = 'tCFfog05pnNUDnqL2VZxR6NMUxeSrWq/Boi0+E8spF4A4ofr3rlSxUQAF1qbSWEWmZM7mG4blFkmD6j4JwmpW5YO+pNn9YDyGyXWG156fdHl8uO5ZEr15glAEWRbzR84wEfA0MFGTVPE1lkO8/CEmQdB04t89/1O/w1cDnyilFU=';
+//### Server Configuration
+$ServerName		= "101.109.246.31";
+$UserName		= "root";
+$UserPassword	= "totsmc";         //   
+$DatabaseName	= "inventory";
 
-$url = 'https://api.line.me/v1/oauth/verify';
 
-$headers = array('Authorization: Bearer ' . $access_token);
-
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-$result = curl_exec($ch);
-curl_close($ch);
-
-echo $result;
+//### Connect to the Database
+function ConnectDB() {
+		global $conn;
+		global $ServerName;
+		global $UserName;
+		global $UserPassword;
+		global $DatabaseName;
+	
+		$conn = mysql_connect($ServerName, $UserName, $UserPassword);
+		if(!$conn)
+			die("Cannot Connect to Server");
+		
+		$select_db = mysql_select_db($DatabaseName);
+		if(!$select_db)
+			die("Cannot Select to Database");
+		mysql_query("set names utf8");
+	
+}
