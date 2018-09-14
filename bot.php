@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 	    
 	  $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://101.109.246.31/dotsmc/pages/testaddtodb.php");
+//curl_setopt($ch, CURLOPT_URL, "http://101.109.246.31/dotsmc/pages/testaddtodb.php");
 $productivity = curl_exec($ch);  
 	    
     	 
