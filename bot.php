@@ -20,10 +20,7 @@ if (!is_null($events['events'])) {
      
       $conn = mysql_connect('101.109.246.31', 'root', 'totsmc');
 	$replyText = 'test';	
-	    if(!$conn)
-			die($replyText = 'filad baes');
-		
-		
+
       
 		
 			
