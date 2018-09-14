@@ -1,4 +1,5 @@
 <?php
+echo "test";
 //### Server Configuration
 $ServerName		= "101.109.246.31";
 $UserName		= "root";
