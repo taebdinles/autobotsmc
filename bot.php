@@ -19,13 +19,14 @@ if (!is_null($events['events'])) {
        // Get text sent
      
       $conn = mysql_connect('101.109.246.31', 'root', 'totsmc');
-		if(!$conn)
-			die("Cannot Connect to Server");
+	$replyText = 'test';	
+	    if(!$conn)
+			die($replyText = 'filad baes');
 		
-		$select_db = mysql_select_db(inventory);
-      $replyText = 'test';
-		if(!$select_db)
-			die($replyText = 'filad baes';)
+		
+      
+		
+			
 		
       
       
