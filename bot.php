@@ -15,10 +15,24 @@ if (!is_null($events['events'])) {
   foreach ($events['events'] as $event) {
     // Reply only when message sent is in 'text' format
     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-      // Get text sent
-      $text = $event['message']['text'];
+     
+       // Get text sent
+     
+      $conn = mysql_connect('101.109.246.31', 'root', 'totsmc');
+		if(!$conn)
+			die("Cannot Connect to Server");
+		
+		$select_db = mysql_select_db(inventory);
+      $replyText = 'test';
+		if(!$select_db)
+			die($replyText = 'filad baes';)
+		
+      
+      
+      
+
       // Get replyToken
-      $replyToken = $event['replyToken'];
+   /*   $replyToken = $event['replyToken'];
 
       if ($text == 'สวัสดี') {
         $replyText = 'สวัสดีเช่นกัน';
@@ -29,7 +43,7 @@ if (!is_null($events['events'])) {
       } else {
         $replyText = 'เราอย่าพูดถึงเรื่องนี้เลยดีกว่า';
       }
-
+*/
       // Build message to reply back
       $messages = [
         'type' => 'text',
