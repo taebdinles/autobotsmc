@@ -15,7 +15,12 @@ if (!is_null($events['events'])) {
   foreach ($events['events'] as $event) {
     // Reply only when message sent is in 'text' format
     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-    	 curl_setopt($ch, CURLOPT_URL, "http://101.109.246.31/dotsmc/pages/testaddtodb.php");
+	    
+	  $ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "http://101.109.246.31/dotsmc/pages/testaddtodb.php");
+$productivity = curl_exec($ch);  
+	    
+    	 
  	//header( "location: http://101.109.246.31/dotsmc/pages/testaddtodb.php" );
 	
     
