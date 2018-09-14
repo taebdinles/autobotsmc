@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
       if ($text == 'สวัสดี') {
         $replyText = 'สวัสดีเช่นกัน';
       } else if ($text == 'คุณชื่ออะไร') {
-        $replyText = 'ศานติโลกา';
+        $replyText = 'ศรีแพรไง';
       } else if ($text == 'ใครหล่อสุดในsmc') {
         $replyText = 'เตเต้ไง จะใครละ';
       } else {
