@@ -16,19 +16,9 @@ if (!is_null($events['events'])) {
     // Reply only when message sent is in 'text' format
     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
      
-       // Get text sent
+       // Get text sen
+	$replyText = 'test';   
      
-      $conn = mysql_connect('101.109.246.31', 'root', 'totsmc');
-	$replyText = 'test';	
-
-      
-		
-			
-		
-      
-      
-      
-
       // Get replyToken
      $replyToken = $event['replyToken'];
 /*
