@@ -38,7 +38,7 @@ $productivity = curl_exec($ch);
 	    $user="user_ws_p4";
 	    $pass="wsp4pass";
 	    
-	    $res= $tests ->getOrderConfigDetail("$user","$pass","7424j7172");
+	    $res= $testsm ->getOrderConfigDetail("$user","$pass","7424j7172");
     	 
         $replyText = 'test';
       } else if ($message == 'ใครหล่อสุดในsmc') {
