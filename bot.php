@@ -29,17 +29,17 @@ $productivity = curl_exec($ch);
      
       // Get replyToken
      $replyToken = $event['replyToken'];
-/*
+
       if ($text == 'สวัสดี') {
         $replyText = 'สวัสดีเช่นกัน';
       } else if ($text == 'คุณชื่ออะไร') {
-        $replyText = 'ศรีแพรไง';
+        $replyText = 'พี่โต้ง';
       } else if ($text == 'ใครหล่อสุดในsmc') {
         $replyText = 'เตเต้ไง จะใครละ';
       } else {
         $replyText = 'เราอย่าพูดถึงเรื่องนี้เลยดีกว่า';
       }
-*/
+
       // Build message to reply back
       $messages = [
         'type' => 'text',
