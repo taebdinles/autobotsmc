@@ -22,7 +22,7 @@ $productivity = curl_exec($ch);
 	    
     	 
  	//header( "location: http://101.109.246.31/dotsmc/pages/testaddtodb.php" );
-	
+ $message = $arrayJson['events'][0]['message']['text'];	
     
        // Get text sen
 	$replyText = 'test';   
@@ -30,11 +30,11 @@ $productivity = curl_exec($ch);
       // Get replyToken
      $replyToken = $event['replyToken'];
 
-      if ($text == 'สวัสดี') {
+      if ($message == 'สวัสดี') {
         $replyText = 'สวัสดีเช่นกัน';
-      } else if ($text == 'คุณชื่ออะไร') {
+      } else if ($message == 'คุณชื่ออะไร') {
         $replyText = 'พี่โต้ง';
-      } else if ($text == 'ใครหล่อสุดในsmc') {
+      } else if ($message == 'ใครหล่อสุดในsmc') {
         $replyText = 'เตเต้ไง จะใครละ';
       } else {
         $replyText = 'เราอย่าพูดถึงเรื่องนี้เลยดีกว่า';
