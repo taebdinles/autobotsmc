@@ -32,7 +32,7 @@ $productivity = curl_exec($ch);
       if ($message == 'เมนู') {
         $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร\n\n2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
       } else if ($message == 'sm') {
-	      $replyText = 'test';
+	      $replyText = 'testsm';
 	       $testsm=new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
 	    $para=new stdClass();
 	    $user="user_ws_p4";
@@ -40,7 +40,7 @@ $productivity = curl_exec($ch);
 	    
 	    $res= $testsm ->getOrderConfigDetail("$user","$pass","7424j7172");
     	 
-        $replyText = 'test';
+        $replyText = 'tests';
       } else if ($message == 'ใครหล่อสุดในsmc') {
         $replyText = 'เตเต้ไง จะใครละ';
       } else {
