@@ -30,8 +30,8 @@ $productivity = curl_exec($ch);
       // Get replyToken
      $replyToken = $event['replyToken'];
 
-      if ($message == 'สวัสดี') {
-        $replyText = 'สวัสดีเช่นกัน';
+      if ($message == 'เมนู') {
+        $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร <br> 2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร ';
       } else if ($message == 'คุณชื่ออะไร') {
         $replyText = 'พี่โต้ง';
       } else if ($message == 'ใครหล่อสุดในsmc') {
