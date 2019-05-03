@@ -19,8 +19,7 @@ if (!is_null($events['events'])) {
 	  $ch = curl_init();
 //curl_setopt($ch, CURLOPT_URL, "http://101.109.246.31/dotsmc/pages/testaddtodb.php");
 $productivity = curl_exec($ch);  
-	    
-    	 
+	 
  	//header( "location: http://101.109.246.31/dotsmc/pages/testaddtodb.php" );
  $message =$event['message']['text'];
     
@@ -32,8 +31,16 @@ $productivity = curl_exec($ch);
 
       if ($message == 'เมนู') {
         $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร\n\n2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
-      } else if ($message == 'คุณชื่ออะไร') {
-        $replyText = 'พี่โต้ง';
+      } else if ($message == 'sm') {
+	      
+	       $testsm=new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
+	    $para=new stdClass();
+	    $user="user_ws_p4";
+	    $pass="wsp4pass";
+	    
+	    $res= $tests ->getOrderConfigDetail("$user","$pass","7424j7172");
+    	 
+        $replyText = $res;
       } else if ($message == 'ใครหล่อสุดในsmc') {
         $replyText = 'เตเต้ไง จะใครละ';
       } else {
