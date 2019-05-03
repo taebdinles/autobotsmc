@@ -35,11 +35,7 @@ $productivity = curl_exec($ch);
 	      $replyText = 'testsm';
 	      
 	         $testsm=new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
-	    $para=new stdClass();
-	    $user="user_ws_p4";
-	    $pass="wsp4pass";
 	    
-	    $res= $testsm ->getOrderConfigDetail("$user","$pass","7424j7172");
     	 
         $replyText = 'tests';
 	      
