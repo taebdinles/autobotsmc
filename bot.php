@@ -22,7 +22,7 @@ $productivity = curl_exec($ch);
 	    
     	 
  	//header( "location: http://101.109.246.31/dotsmc/pages/testaddtodb.php" );
- $message = $arrayJson['events'][0]['message']['text'];	
+ $message =$event['message']['text'];
     
        // Get text sen
 	$replyText = 'test';   
