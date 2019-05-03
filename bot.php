@@ -40,7 +40,7 @@ $productivity = curl_exec($ch);
 	    
 	    $res= $tests ->getOrderConfigDetail("$user","$pass","7424j7172");
     	 
-        $replyText = $res;
+        $replyText = 'test';
       } else if ($message == 'ใครหล่อสุดในsmc') {
         $replyText = 'เตเต้ไง จะใครละ';
       } else {
