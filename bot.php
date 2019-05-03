@@ -37,7 +37,7 @@ $productivity = curl_exec($ch);
 	         $testsm=new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
 	    
     	 
-        $replyText = 'tests';
+       
 	      
 	    
       } else if ($message == 'ใครหล่อสุดในsmc') {
