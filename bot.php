@@ -31,7 +31,7 @@ $productivity = curl_exec($ch);
      $replyToken = $event['replyToken'];
 
       if ($message == 'เมนู') {
-        $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร <br> 2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร ';
+        $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร \n2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
       } else if ($message == 'คุณชื่ออะไร') {
         $replyText = 'พี่โต้ง';
       } else if ($message == 'ใครหล่อสุดในsmc') {
