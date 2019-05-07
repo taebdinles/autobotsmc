@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 	      $param=new stdClass();
   $usersm = "user_ws_p4";
   $passsm = "wsp4pass";
-$resultBbmw1 = $clientBbmw->getOrderConfigDetail("$usersm","$passsm","7755j8137" );  //$z_idnumber  	      
+$resultBbmw1 = $clientBbmw->getOrderConfigDetail("$usersm","$passsm","7755j8137" ); 
        		$replyText = 'testsm';
      
 	      
