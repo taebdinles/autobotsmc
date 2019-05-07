@@ -62,7 +62,7 @@ $resultBbmw1 = $clientBbmw->getOrderConfigDetail("$usersm","$passsm","7755j8137"
       ];
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
+//s
       $ch = curl_init($url);
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
