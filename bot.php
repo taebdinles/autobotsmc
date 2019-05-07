@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 		 curl_setopt($ch, CURLOPT_URL, "http://203.114.98.244/index.php?r=WebService/sr");
 		 $productivity = curl_exec($ch);  
 	     	$replyText = $productivity;
-       		
+       		$replyText = 'test';
         
 	      
 	    
