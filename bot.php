@@ -36,7 +36,8 @@ if (!is_null($events['events'])) {
 	  $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "http://203.114.98.244/index.php?r=WebService/sr");
         	$productivity = curl_exec($ch); 
-       		$replyText = var_dump($productivity);
+	      	$soul	=curl_getinfo($ch);
+       		$replyText = var_dump($soul);
        
 	      
 	    
