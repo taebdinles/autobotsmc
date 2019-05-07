@@ -34,11 +34,7 @@ if (!is_null($events['events'])) {
       } else if ($message == 'sm') {
 	     
 	
-        	 $ch = curl_init();
-	     	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-		 curl_setopt($ch, CURLOPT_URL, "http://203.114.98.244/index.php?r=WebService/sr");
-		 $productivity = curl_exec($ch);  
-	     	$replyText = $productivity;
+        	
        		$replyText = 'test';
         
 	      
