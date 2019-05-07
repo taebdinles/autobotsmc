@@ -16,9 +16,9 @@ if (!is_null($events['events'])) {
     // Reply only when message sent is in 'text' format
     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 	    
-	  $ch = curl_init();
-//curl_setopt($ch, CURLOPT_URL, "http://101.109.246.31/dotsmc/pages/testaddtodb.php");
-$productivity = curl_exec($ch);  
+//	  $ch = curl_init();
+//curl_setopt($ch, CURLOPT_URL, "http://203.114.98.244/index.php?r=WebService/sr");
+//$productivity = curl_exec($ch);  
 	 
  	//header( "location: http://101.109.246.31/dotsmc/pages/testaddtodb.php" );
  $message =$event['message']['text'];
@@ -32,12 +32,15 @@ $productivity = curl_exec($ch);
       if ($message == 'เมนู') {
         $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร<br/>2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
       } else if ($message == 'sm') {
-	      $replyText = 'testsm';
-	      
-	         $testsm=new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
-	    
-    	 
-       
+	     
+	
+        	 $ch = curl_init();
+	     	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+		 curl_setopt($ch, CURLOPT_URL, "http://203.114.98.244/index.php?r=WebService/sr");
+		 $productivity = curl_exec($ch);  
+	     	$replyText = $productivity;
+       		
+        
 	      
 	    
       } else if ($message == 'ใครหล่อสุดในsmc') {
