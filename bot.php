@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
         $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร<br/>2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
       } else if ($message == 'sm') {
 	     
-$url         = "http://203.114.98.244/index.php?r=WebService/sr"; 
+
 $client = new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
        		$replyText = 'testsm';
      
