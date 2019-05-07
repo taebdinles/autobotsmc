@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
       } else if ($message == 'sm') {
 	     
 $url         = "http://203.114.98.244/index.php?r=WebService/sr"; 
-$client     = new SoapClient($url, array("trace" => 1, "exception" => 0));  
+$client = new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
        		$replyText = 'testsm';
      
 	      
