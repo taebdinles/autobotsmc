@@ -35,6 +35,8 @@ if (!is_null($events['events'])) {
 	     
 
 $client = new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
+	        $usersm = "user_ws_p4";
+  $passsm = "wsp4pass";
        		$replyText = 'testsm';
      
 	      
