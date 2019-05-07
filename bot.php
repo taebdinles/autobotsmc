@@ -35,9 +35,9 @@ if (!is_null($events['events'])) {
 	     
 	  $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "http://203.114.98.244/index.php?r=WebService/sr");
-        	
-       		$replyText = 'test';
-        
+        	$productivity = curl_exec($ch); 
+       		$replyText = var_dump($productivity);
+       
 	      
 	    
       } else if ($message == 'ใครหล่อสุดในsmc') {
