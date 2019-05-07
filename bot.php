@@ -33,11 +33,8 @@ if (!is_null($events['events'])) {
         $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร<br/>2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
       } else if ($message == 'sm') {
 	     
- $clientBbmw = new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
-	      $param=new stdClass();
-  $usersm = "user_ws_p4";
-  $passsm = "wsp4pass";
-$resultBbmw1 = $clientBbmw->getOrderConfigDetail("$usersm","$passsm","7755j8137" ); 
+$url         = "http://203.114.98.244/index.php?r=WebService/sr"; 
+$client     = new SoapClient($url, array("trace" => 1, "exception" => 0));  
        		$replyText = 'testsm';
      
 	      
