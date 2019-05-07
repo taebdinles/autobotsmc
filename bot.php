@@ -33,10 +33,8 @@ if (!is_null($events['events'])) {
         $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร<br/>2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
       } else if ($message == 'sm') {
 	     
-	  $ch = curl_init("http://203.114.98.244/index.php?r=WebService/sr");
-        	$productivity = curl_exec($ch); 
-	      	$soul	=curl_getinfo($ch);
-       		$replyText = var_dump($soul);
+$client = new nusoap_client("http://203.114.98.244/index.php?r=WebService/sr");
+       		$replyText = 'testsm';
        
 	      
 	    
