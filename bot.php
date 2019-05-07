@@ -32,9 +32,9 @@ if (!is_null($events['events'])) {
       if ($message == 'เมนู') {
         $replyText = '1.หากต้องการตรวจสอบข้อมูลเขหมายJให้พิม!!ตามด้วยหมายเลขวงจร<PRE>2.หากต้องการตรวจSessionให้พิม??ตามด้วยหมายเลขวงจร\n\n3.Autoconfig(ZTE)ให้พิม@@ตามด้วยเลขวงจร ';
       } else if ($message == 'sm') {
-	     
+$client = new SoapClient("http://203.114.98.244/index.php?r=WebService/sr", array('soap_version'   => SOAP_1_2));	     
 
-$client = new SoapClient("http://203.114.98.244/index.php?r=WebService/sr");
+
 	        $usersm = "user_ws_p4";
 
        		$replyText = 'testsm';
